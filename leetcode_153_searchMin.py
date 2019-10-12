@@ -1,4 +1,5 @@
 def binary_search(nums, start, end):
+    
     mid = int(start+(end-start)/2)
     # [1,2,3,4,5]   ->
     if nums[end] > nums[start]:
