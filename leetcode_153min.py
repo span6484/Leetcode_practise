@@ -10,6 +10,7 @@ def binary_search(nums, start, end):
         #[5,1,2,3]   ->
         return binary_search(nums,mid+1,end)
     return mid
+    
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         if len(nums) == 1:
