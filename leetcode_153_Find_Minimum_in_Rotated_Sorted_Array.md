@@ -1,5 +1,4 @@
 # binarysearch 找最小值 思路  
- 我的仓库被盗了
 * Question link  https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 * [leetcode_153min.py](./leetcode_153min.py):
 
