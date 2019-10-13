@@ -1,6 +1,6 @@
 # binarysearch 找最小值 思路  
 * Question link  https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
-* [leetcode_153min.py](./leetcode_153min.py):
+* [leetcode_153_searchMin.py](./leetcode_153_searchMin.py):
 
 举例 数组[3,4,5,1,2] 
 * 先判断向哪边切割， 找出最初的mid，并将这个mid根据情况设置成start，还是end
