@@ -12,25 +12,23 @@ def binary_search(nums, start, end, target):
     if nums[end] > nums[start]:
         if target < nums[mid] and mid > 0:
             return binary_search(nums, start, mid-1, target)
-        elif target > nums[mid] and mid < len(nums) - 1:
-            return binary_search(nums, mid+1, end, target)
+        return binary_search(nums, mid+1, end, target)
     if nums[end] < nums[start]:
-        if target < nums[end] and nums[mid] > nums[end]:
-            return binary_search(nums, mid+1 , end, target)
-        if target < nums[end] and nums[mid] < nums[end]:
-            if nums[mid] < target:
+        if target < nums[end]:
+            if nums[mid] > nums[end]:
                 return binary_search(nums, mid+1 , end, target)
-            elif nums[mid] > target:
+            else:
+                if nums[mid] < target:
+                    return binary_search(nums, mid+1 , end, target)
                 return binary_search(nums, start, mid-1, target)
-        if target > nums[end] and nums[mid] > nums[end]:
-            if nums[mid] < target:
-                return binary_search(nums,mid+1, end, target)
-            elif nums[mid] > target:
+        else:
+            if nums[mid] > nums[end]:
+                if nums[mid] < target:
+                    return binary_search(nums,mid+1, end, target)
                 return binary_search(nums, start, mid - 1, target)
-        if target > nums[end] and nums[mid] < nums[end]:
-            if nums[mid] < target:
-                return binary_search(nums,start, mid-1, target)
-            elif nums[mid] > target:
+            else:
+                if nums[mid] < target:
+                    return binary_search(nums,start, mid-1, target)
                 return binary_search(nums,mid+1, end, target)
     return mid
 class Solution:
