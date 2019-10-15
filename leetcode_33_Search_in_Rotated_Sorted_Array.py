@@ -13,7 +13,7 @@ def binary_search(nums, start, end, target):
         if target < nums[mid] and mid > 0:
             return binary_search(nums, start, mid-1, target)
         return binary_search(nums, mid+1, end, target)
-    if nums[end] < nums[start]:
+    elif nums[end] < nums[start]:
         if target < nums[end]:
             if nums[mid] > nums[end]:
                 return binary_search(nums, mid+1 , end, target)
@@ -30,7 +30,8 @@ def binary_search(nums, start, end, target):
                 if nums[mid] < target:
                     return binary_search(nums,start, mid-1, target)
                 return binary_search(nums,mid+1, end, target)
-    return mid
+    else:
+        return mid
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         if len(nums) == 0:
