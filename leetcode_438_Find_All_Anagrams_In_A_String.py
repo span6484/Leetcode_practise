@@ -13,6 +13,7 @@ def findAnagrams(s:str, p: str):
                 print(arr)
         return arr
 
+
 # s = "aba"
 # p = "a"
 # arr = findAnagrams(s,p)
