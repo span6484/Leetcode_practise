@@ -10,24 +10,31 @@ def create_dict(str):
         num = 1
     return arr
 
-class Solution:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
-        target = create_dict(p)
-        p_len = len(p)
-        arr_save = []
-        if len(s) < p_len:
-            return arr_save
-        #print("p dict:" + str(target))
-        for i in range(len(s)):
-            count = 0
-            arr = create_dict(s[i:p_len+i])
-           # print("arr dict:" + str(arr))    
-            for j in s[i:p_len+i]:
-                if arr.get(j) == None or target.get(j) == None:
-                    continue
-                if arr[j] == target[j] :
-                    count = count + 1
-                 #   print("count is "+ str(count))
-                if count == p_len:
-                    arr_save.append(i)
+
+def findAnagrams(s: str, p: str):
+    target = create_dict(p)
+    p_len = len(p)
+    arr_save = []
+    arr_index = []
+    arr_return = []
+    index = 0
+    if len(s) < p_len:
         return arr_save
+    #print("p dict:" + str(target))
+    for i in range(len(s)):
+        arr = create_dict(s[i:p_len+i])
+        arr_save.append(arr)
+        arr_index.append(i)
+    print(arr_index)
+
+    for i in range(len(arr_save)):
+        if arr_save[i] == target:
+            arr_return.append(index)
+        index = index + 1
+    return arr_return
+
+
+s = 'abac'
+p = 'ab'
+arr = findAnagrams(s, p)
+print(arr)
