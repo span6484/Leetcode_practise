@@ -44,3 +44,7 @@ class Solution:
         end = len(nums) - 1
         index = binary_search(nums, start, end, target)
         return index
+
+nums = [3,1,2]
+targert = 1
+answer = search()
