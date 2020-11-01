@@ -15,5 +15,12 @@
 
 4. random的对象是一个节点， 数组里面标志的的如[13,0]
 
+5. 为什么要用dic[cur.random]
+
+```python
+    dic[cur].random = dic[cur.random]
+```
+
+cur.random 的值确实是我们要复制的节点， 但如果直接用等于则相当于新的random的节点指向旧的random的节点， cur.random的值等于 dic[cur.random]的值， 但从字典的思想里，cur.random是key，即旧的节点， dic[cur.random]是在value里， 新的节点
 
  
