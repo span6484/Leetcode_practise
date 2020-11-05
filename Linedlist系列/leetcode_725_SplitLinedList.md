@@ -1,4 +1,4 @@
-# HashMap   
+# Split Linked List
 * Question link  https://leetcode.com/problems/split-linked-list-in-parts/
 * [leetcode_706_DesignHashMap](./leetcode_725_SplitLinedList.py):
 
