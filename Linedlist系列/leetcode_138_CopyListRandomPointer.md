@@ -2,7 +2,6 @@
 ## Question link  https://leetcode.com/problems/copy-list-with-random-pointer ##
 ## [leetcode_138_CopyListRandomPointer](./leetcode_138_CopyListRandomPointer.py): ##
 
-![leetcode_725](https://user-images.githubusercontent.com/37071362/98304566-4a205600-2014-11eb-9c72-2da667005946.PNG)
 
 ## Hints:
 
