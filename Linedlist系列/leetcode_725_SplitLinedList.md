@@ -2,6 +2,7 @@
 * Question link  https://leetcode.com/problems/split-linked-list-in-parts/
 * [leetcode_706_DesignHashMap](./leetcode_725_SplitLinedList.py):
 
+![leetcode_725](https://user-images.githubusercontent.com/37071362/98304566-4a205600-2014-11eb-9c72-2da667005946.PNG)
 ## 解题思路：
 
 1. 用字典进行存储， 将数值以key value 形式一一存入
