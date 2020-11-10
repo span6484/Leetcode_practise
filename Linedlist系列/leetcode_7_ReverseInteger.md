@@ -1,6 +1,6 @@
 # Reverse Integer
 * Question link  https://leetcode.com/problems/reverse-integer/
-* [leetcode_706_DesignHashMap](./leetcode_7_ReverseInteger.py):
+* [leetcode_706_DesignHashMap](./leetcode_7_ReverseInteger.py) <br>
 ![leetcode_7](https://user-images.githubusercontent.com/37071362/98667157-29ecf000-23a2-11eb-8186-d7311418306c.PNG)
 
 
