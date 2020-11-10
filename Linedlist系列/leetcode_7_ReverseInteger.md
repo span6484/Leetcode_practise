@@ -1,7 +1,8 @@
-# Reverse Integer
+# 7. Reverse Integer
 * Question link  https://leetcode.com/problems/reverse-integer/
 * [leetcode_706_DesignHashMap](./leetcode_7_ReverseInteger.py) <br>
 ![leetcode_7](https://user-images.githubusercontent.com/37071362/98667157-29ecf000-23a2-11eb-8186-d7311418306c.PNG)
+![leetcode_7_sub](https://user-images.githubusercontent.com/37071362/98677840-bc48c000-23b1-11eb-80dd-421d6f60e877.PNG)
 
 
 ## 解题思路：
