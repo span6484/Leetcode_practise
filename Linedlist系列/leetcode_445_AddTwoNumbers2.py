@@ -1,4 +1,5 @@
 # 做题思路： 通过question2， 我们拥有了相加的方法，我们将list反转变成question2类型， 然后返回的list也再次反转
+![leetcode_445_submission](https://user-images.githubusercontent.com/37071362/98677241-de8e0e00-23b0-11eb-8cd0-56cfb9a7abce.PNG)
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
