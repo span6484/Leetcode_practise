@@ -149,7 +149,7 @@ class SolutionImproved_1:
 
 
 
-class SolutionImproved_2:
+class SolutionRickImproved_2:
     # Note1: 进位叫做`carry`
     # Note2: 提炼出 add_helper
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
