@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         
@@ -23,4 +24,11 @@ class Solution:
             return right
         return -1
         
-                
+
+# test case
+if __name__ == "__main__":
+    nums = [-1, 0, 3, 5, 9, 12]
+    target = 9
+
+    res = Solution().search(nums, target)
+    print(res)
