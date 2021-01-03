@@ -40,7 +40,6 @@ class Solution:
             #设置一个动态的node名字，
             #想法： 每一组先排好序， 不着急链接，设置一个动态的变量名作为链接点，最后通过循环统一链接
 
-            # exec('connect_Node{} = {}'.format(i,h2))
             connect_Node = h2
             while(j < lenEachGroup):
                 
@@ -59,14 +58,9 @@ class Solution:
                     old_next = h2.next
                 
                 h2.next = new_next
-                # new_next.next = old_next
-                # if(i == 0):
-                #     head = h2
-                # 刚开始需要指向一个none
-                # if (j == 0):
-                #     new_next.next = dummy_head
                 j += 1
 
+        # 通过pre_connectNode和connectnode 链接每一组排好序的list， connectnode是每一组的末尾和开头
             if(i == 0):
                 head = h2
                 pre_group_connetNode = connect_Node
@@ -79,15 +73,12 @@ class Solution:
 
             i += 1
 
+        # 判断，如果不是整数，说明后面有不变的list需要接上， 如果是整数，末尾添加none
         if (len_list/k > groupNums):
             connect_Node.next = h2
         else:
             connect_Node.next = None
             
-
-
-            
-        
         return head
 
 
