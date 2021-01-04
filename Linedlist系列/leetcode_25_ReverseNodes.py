@@ -13,7 +13,6 @@ class Solution:
             return head
         # 每组实际更改次数，第一个为0
         lenEachGroup = k-1
-        
 
         # List length
         len_list = 0
@@ -78,7 +77,7 @@ class Solution:
             connect_Node.next = h2
         else:
             connect_Node.next = None
-            
+
         return head
 
 
