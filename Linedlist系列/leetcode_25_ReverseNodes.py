@@ -152,6 +152,66 @@ class Solution:
 
         return head
 
+
+    class Rick's Solution(object):
+
+        def reverseKGroup(self, head, k):
+            """
+            :type head: ListNode
+            :type k: int
+            :rtype: ListNode
+            思路:
+            1. dummy肯定是要的
+            2. defend k==1
+            3. general:
+                产生一个group:
+                    足够k个则返回k个, 不足则告知不足
+                    翻转一个group后, 接上prev, 接上next
+                    不足则直接break.  如果next为空, 也break.
+            """
+            if k == 1:
+                return head
+            
+            prev = dummy = ListNode(None)
+            dummy.next = head
+            rem = head
+            while rem:
+                ghead, rem, enough = self.return_group(rem, k)
+                if enough:
+                    new_head = self.reverse(ghead)
+                    prev.next = new_head
+                    prev = ghead # currently ghead is the last node of new_head
+                    prev.next = rem
+            return dummy.next
+
+        def return_group(self, head, k):
+            """
+            "返回[head, cur]作为k group, 如果k不足, 会告知caller不足"
+            采用双闭区间的话, 如果为right边界为None, 则判断为not enough
+            """
+            k = k - 1
+            enough = True
+            cur = head
+            while k and cur:
+                cur = cur.next
+                k -= 1
+            if not cur:
+                return head, None, not enough
+            else:
+                rem = cur.next
+                cur.next = None
+                return head, rem, enough
+            
+
+        def reverse(self, head):
+            "翻转链表"
+            prev, cur = None, head
+            while cur:
+                temp = cur.next
+                cur.next = prev
+                prev = cur
+                cur = temp
+            return prev
 if __name__ == "__main__":
     
     h1 = ListNode(1)
