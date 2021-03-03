@@ -13,6 +13,7 @@
 # 目标速度： O(n)
 # 思路：计数法, 字典
 
+from timeit import Timer
 
 #Solution 1   
 # def anagramSolution(s1,s2):
@@ -74,3 +75,7 @@ if c:
 
 else:
     print("they are not same")
+
+# t1 = Timer("anagramSolution('ther','sdaf')", "from __main__ import anagramSolution")
+
+# print("Total time is %f"%t1.timeit(number = 100))
