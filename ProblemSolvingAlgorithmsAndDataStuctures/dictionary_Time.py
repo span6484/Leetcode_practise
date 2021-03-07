@@ -9,3 +9,4 @@ for i in range(10000, 100001, 20000):
     x = {j:None for j in range(i)}
     d_time = t.timeit(number=1000)
     print("%d, %10.3f, %10.3f" % (i, lst_time, d_time))
+    print(x)

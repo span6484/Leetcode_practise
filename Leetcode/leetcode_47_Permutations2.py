@@ -1,60 +1,69 @@
 # -*- coding:utf8 -*-
 #想法： 先存入index， 然后翻译成对应array，稍后筛选
 class Solution(object):
-    def permute(self, nums):
+    def permuteUnique(self, nums):
 
-        if len(nums) == 0:
-            return nums
-
-        if len(nums) == 1:
-            return [nums]
-
-        nums = sorted(nums)
-        res = []
+        result = []
         partial = []
-
-        res1 = []
-        partial1 = []
-        self.getResult(partial, nums, len(nums), res)
-        for i in res:
+        
+        filer_result = []
+        
+        self.findResult(nums, partial, result)
+        
+        self.filer(nums,result, filer_result)
+        return filer_result
+    
+    def findResult(self, nums, partial, result):
+        
+        if len(partial) == len(nums):
+            result.append(list(partial))
+        
+        for i in range(len(nums)):
+            if i not in partial:
+                partial.append(i)
+                self.findResult(nums, partial, result)
+                partial.pop()
+    
+    def filer(self, nums,result, filer_result):
+        
+        
+        for i in result:
+            partial1 = []
             for j in i:
                 partial1.append(nums[j])
-            res1.append(partial1)
-            partial1 = []
+            
+            if partial1 not in filer_result:
+                filer_result.append(partial1)
 
-        partial2 = []
-        for i in res1:
-            if i not in partial2:
-                partial2.append(i)
-        return partial2
+        
+        
 
-
-    # partial: 临时存储的list， 存满一个弹出一次，rem is the len(nums)
-    def getResult(self,partial, nums, rem, result):
-        print("partial is %s" % partial)
-        if rem == 0:
-            result.append(list(partial))
-            print("result is %s" % result)
+class Solution2(object):
+    def permuteUnique(self, nums):
+        
+        self.ret = []
+        self.used = [False] * len(nums)
+        nums = sorted(nums)
+        self.backtrack(nums = nums, partial = [])
+        return self.ret
+    
+    def backtrack(self, nums, partial):
+        if len(partial) == len(nums):
+            self.ret.append(partial[:])
         
         else:
-
-            for i in range(len(nums)):
-                print("n is %d" % i)    
-                if i not in partial:
-                    partial.append(i)
-                    self.getResult(partial, nums,rem-1,result)
-                    print("time")
-                    partial.pop()
-                    print(partial)
-
-        
-        
-
-
+            for i, num in enumerate(nums):
+                if not self.used[i]:
+                    if i == 0 or nums[i-1] != nums[i] or self.used[i-1]:
+                        partial.append(nums[i])
+                        self.used[i] = True
+                        self.backtrack(nums, partial)
+                        partial.pop()
+                        self.used[i] = False
 
 
 if __name__ == "__main__":
     nums = [1,2,1]
-    a = Solution().permute(nums)
+    a = Solution2().permuteUnique(nums)
 
     print(a)
