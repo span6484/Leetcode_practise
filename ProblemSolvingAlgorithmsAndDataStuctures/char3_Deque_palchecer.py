@@ -1,4 +1,4 @@
-from pythonds.basic.deque import Deque
+)from pythonds.basic.deque import Deque
 
 def palchecker(aString):
     chardeque = Deque()
