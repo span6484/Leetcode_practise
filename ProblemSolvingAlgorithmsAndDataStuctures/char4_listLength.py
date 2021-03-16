@@ -27,8 +27,8 @@ def listnum3(numList):
     else:
         return numList[0] + listnum3(numList[1:])
 
-
-t1 = Timer("listnum([1,2,3,4,5])", "from __main__ import listnum")
+num = [1,2,3]
+t1 = Timer("listnum({})".format(num), "from __main__ import listnum")
 t2 = Timer("listnum2([1,2,3,4,5],0)", "from __main__ import listnum2")
 t3= Timer("listnum3([1,2,3,4,5])", "from __main__ import listnum3")
 print("%f seconds \n"%t1.timeit(number=1000 ))
