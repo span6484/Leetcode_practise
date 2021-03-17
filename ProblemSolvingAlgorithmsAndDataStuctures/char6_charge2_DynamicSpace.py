@@ -17,4 +17,3 @@ def dpMakeChange(coinValueList, change, minCoins):
 
 
 print(dpMakeChange([1,5,10,21,25], 63, [0]*64))
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
