@@ -2,7 +2,7 @@
 
 ## quesiton
 
-```
+```python
 $ python3 quiz_2.py
 Enter two integers: 0 4
 The generated mapping is:
@@ -124,6 +124,8 @@ def return_reversed(original_mapping):
 ## 本题遇见过的bug
 
 1. ​	'int' object is not iterable
+
+   iterable 可遍历的
 
    ```python
      value_len = len(keys)  
