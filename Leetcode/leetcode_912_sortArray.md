@@ -2,7 +2,7 @@
 
 ## Topic: 	divide and conquer, 分而治之
 
-
+<img src="/Users/shaoqiupan/Library/Application Support/typora-user-images/image-20210410171650786.png" alt="image-20210410171650786" style="zoom: 50%;" />
 
 ### 思路历程：
 
