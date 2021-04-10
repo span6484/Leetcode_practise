@@ -2,7 +2,11 @@
 
 ## Topic: 	divide and conquer, 分而治之
 
-<img src="/Users/shaoqiupan/Library/Application Support/typora-user-images/image-20210410171650786.png" alt="image-20210410171650786" style="zoom: 50%;" />
+<img src="/Users/shaoqiupan/Library/Application Support/typora-user-images/image-20210410171650786.png" alt="image-20210410171650786" style="zoom:50%;" />
+
+
+
+
 
 ### 思路历程：
 
@@ -169,6 +173,8 @@ def divide_and_conquer(s):
   ![image-20210410164626649](/Users/shaoqiupan/Library/Application Support/typora-user-images/image-20210410164626649.png)
 
 ------
+
+
 
 
 
