@@ -2,10 +2,7 @@
 
 ## Topic: 	divide and conquer, 分而治之
 
-<img src="/Users/shaoqiupan/Library/Application Support/typora-user-images/image-20210410171650786.png" alt="image-20210410171650786" style="zoom:50%;" />
-
-
-
+<img src="https://user-images.githubusercontent.com/37071362/114265397-2a59e780-9a23-11eb-87e9-c6e8e06b90ba.png" alt="image-20210410171650786" style="zoom:40%;" />
 
 
 ### 思路历程：
@@ -170,7 +167,7 @@ def divide_and_conquer(s):
 
 - 学会画图来一步步跟踪， 每个递归都会开辟空间，理清思路(顺着管道走，有管道的地方优先走管道)
 
-  ![image-20210410164626649](/Users/shaoqiupan/Library/Application Support/typora-user-images/image-20210410164626649.png)
+<img src="https://user-images.githubusercontent.com/37071362/114265464-7ad14500-9a23-11eb-8055-51dbe87de76a.png" alt="image-20210410171650786" style="zoom:40%;" />
 
 ------
 
