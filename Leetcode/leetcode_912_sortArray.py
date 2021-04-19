@@ -127,3 +127,48 @@ class Solution:
         else:
             nums = mergeSort(nums, 0, len(nums)-1)
             return nums
+
+
+
+#solution2:
+
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        
+        def merge(nums, left, mid, right):
+            array_A = nums[left:mid].copy()
+            array_B = nums[mid:right].copy()
+            array_C = []
+            while array_A != [] and array_B != []:
+                if array_A[0] <= array_B[0]:
+                    array_C.append(array_A.pop(0))
+                else:
+                    array_C.append(array_B.pop(0))
+            while array_A != []:
+                array_C.append(array_A.pop(0))
+            
+            while array_B != []:
+                array_C.append(array_B.pop(0))
+            nums[left:right] = array_C
+            return nums
+        
+        def divide(nums, left, right):
+            mid = (left+right)//2
+
+            if len(nums[left:mid]) > 1:
+                divide(nums, left, mid)
+            if len(nums[mid:right]) > 1:
+                divide(nums, mid, right)
+                
+            nums = merge(nums, left, mid, right)
+            return nums
+        left = 0
+        right = len(nums)
+        if len(nums) == 0:
+            return None
+        elif len(nums) == 1:
+            return nums
+        else:
+            nums = divide(nums, left, right)
+        
+        return nums
