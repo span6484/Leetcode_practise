@@ -40,3 +40,54 @@ Output: [8,9,9,9,0,0,0,1]
 
 - 依次相加即可
 - 注意两个细节，一个是不同的长度，第二个是进位，需要额外的1 加上去 
+
+
+
+
+
+
+
+### solution
+
+
+
+```python
+class Solution:
+    
+    
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        
+        carry = 0;
+        dummy_head = ListNode(0);
+        new_head = dummy_head
+        
+        while(l1 != None and l2 != None):
+            val = l1.val + l2.val+carry
+            carry = 0
+            if(val > 9):
+                val = val-10
+                carry += 1
+            
+            new_head.next = ListNode(val)
+            new_head = new_head.next
+            l1 = l1.next
+            l2 = l2.next
+        
+        
+        rem_head = l1 if l1!=None else l2
+        while(rem_head != None):
+            val = rem_head.val+carry
+            carry = 0
+            if(val > 9):
+                val = val-10
+                carry += 1
+            new_head.next = ListNode(val)
+            new_head = new_head.next
+            rem_head = rem_head.next
+
+            
+        if(carry != 0):
+            new_head.next = ListNode(carry)
+        return dummy_head.next
+```
+
