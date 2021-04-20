@@ -1,7 +1,4 @@
 # 2. Add Two Numbers
-* Question link https://leetcode.com/problems/add-two-numbers/
-* [leetcode_2_AddTwoNumbers](./leetcode_2_AddTwoNumbers.py) 
-
 **median**                   用时40m
 
 You are given two **non-empty** linked lists representing two non-negative integers. The digits are stored in **reverse order**, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
@@ -47,9 +44,7 @@ Output: [8,9,9,9,0,0,0,1]
 
 
 
-### solution
-
-
+### solution(2nd)
 
 ```python
 class Solution:
@@ -89,5 +84,63 @@ class Solution:
         if(carry != 0):
             new_head.next = ListNode(carry)
         return dummy_head.next
+```
+
+
+
+### Rick Solution
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+
+
+class SolutionRickImproved_2:
+    # Note1: 进位叫做`carry`
+    # Note2: 提炼出 add_helper
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        
+        carry = 0
+        # h3: tail of return list
+        h3 = dummy_head = ListNode(0)
+        h1 = l1
+        h2 = l2
+
+        # 合并公共部分
+        while h1 != None and h2 != None:
+            digit_sum = h1.val + h2.val + carry
+            
+            h3,carry = self.add_helper(digit_sum, h3)
+
+            h1 = h1.next
+            h2 = h2.next
+
+        # 合并剩余部分
+        rem_head = h1 if h1 != None else h2
+        while rem_head != None:
+            digit_sum = rem_head.val+carry
+            
+            h3,carry = self.add_helper(digit_sum, h3)
+            
+            rem_head = rem_head.next
+            
+        if(carry != 0):
+            h3.next = ListNode(carry)
+            
+        return dummy_head.next
+
+    # add a node after h3
+    def add_helper(self, val, h3):
+        carry=0
+        if(val >= 10):
+            carry = 1
+            newHead = ListNode(val-10)
+        else:
+            newHead = ListNode(val)
+        h3.next = newHead
+        return newHead, carry
 ```
 
