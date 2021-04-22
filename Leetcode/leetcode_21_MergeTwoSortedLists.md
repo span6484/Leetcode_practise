@@ -93,43 +93,33 @@ class Solution:
 
 
 
-### **Solution2             接上list										**40 ms
+### **Solution2             接上list										**28 ms
 
 
 
 ```python
-
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        l3 = ListNode()
-        if l1 == None and l2 == None:
-            return None
-        elif l1 == None:
-            l3 = l2
-            return l3
-        elif l2 == None:
-            l3 = l1
-            return l3
-        else:
-            l3_head = l3
-            while l1 != None and l2 != None:
-                if(l1.val <= l2.val):
-                    l3.next = l1
-                    l1 = l1.next
-                    l3 = l3.next
-                else:
-                    l3.next = l2
-                    l2 = l2.next
-                    l3 = l3.next
-            while l2 != None:
-                    l3.next = l2
-                    l2 = l2.next
-                    l3 = l3.next
-            while l1 != None:
-                    l3.next = l1
-                    l1 = l1.next
-                    l3 = l3.next
-            return l3_head.next
-
+        dummy_head = ListNode()
+        head = dummy_head
+        while l1 != None and l2 != None:
+            if l1.val <= l2.val:
+                dummy_head.next = l1
+                l1 = l1.next
+            else:
+                dummy_head.next = l2
+                l2 = l2.next
+            dummy_head = dummy_head.next
+        if l1 != None:
+            dummy_head.next = l1
+            
+        if l2 != None:
+            dummy_head.next = l2
+        return head.next
 ```
 
