@@ -6,7 +6,7 @@ The objective for each week is try to update a leetcode question daily, if it is
 
 
 
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-7403abe8b72683c17d5c546c875e2339_1440w.jpg&refer=http%3A%2F%2Fpic4.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622196049&t=efca9a68afd4801b13c24b7b29f60c71" alt="img" style="zoom: 50%;" />
+![image](https://user-images.githubusercontent.com/37071362/116387821-c8d0b000-a84d-11eb-8ae2-9a40c98d5855.png)
 
 > ​															**Science Manu et Mente**.
 
