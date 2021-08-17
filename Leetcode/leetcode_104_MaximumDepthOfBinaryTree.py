@@ -30,3 +30,22 @@ class Solution:
 
             level += 1
         return level
+
+    
+#version2: DFS
+def dfs(root,num):
+    if root == None:
+        return num
+    num += 1
+    left = dfs(root.left, num)
+    right = dfs(root.right,num)
+    max_depth = max(left,right)
+    return max_depth
+class Solution:
+
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if root == None:
+            return 0
+        num = 0
+        max_depth = dfs(root,num)
+        return max_depth
