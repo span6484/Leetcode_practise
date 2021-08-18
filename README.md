@@ -1,6 +1,6 @@
 # Python Treasure-House
 
-**H**ere is the my python code resources, includes the leetcode, reference book cases and challenges in uni.  I wonder that i could improve my stand of coding, and build the integrity information Technology knowledge structure before i finished my master learning in UNSW. 
+**H**ere are my python code resources, includes the leetcode, reference book cases and challenges in uni.  I wonder that i could improve my stand of coding, and build the integrity information Technology knowledge structure before i finished my master learning in UNSW. 
 
 The objective for each week is try to update a leetcode question daily, if it is a medium or hard level question, try to solve it in 2 days.
 
