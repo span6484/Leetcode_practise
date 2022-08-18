@@ -1,3 +1,5 @@
+
+
 ## JAVA 栈，为什么要使用Deque，而不推荐使用Stack，Deque中ArrayDeque与LinkedList的区别，Deque方法详解
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020053121015811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MDEzNjI5,size_16,color_FFFFFF,t_70)

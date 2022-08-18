@@ -1,0 +1,69 @@
+#### [47. 全排列 II](https://leetcode.cn/problems/permutations-ii/)
+
+难度中等1159收藏分享切换为英文接收动态反馈
+
+给定一个可包含重复数字的序列 `nums` ，***按任意顺序*** 返回所有不重复的全排列。
+
+ 
+
+**示例 1：**
+
+```
+输入：nums = [1,1,2]
+输出：
+[[1,1,2],
+ [1,2,1],
+ [2,1,1]]
+```
+
+**示例 2：**
+
+```
+输入：nums = [1,2,3]
+输出：[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+```
+
+ 
+
+**提示：**
+
+- `1 <= nums.length <= 8`
+- `-10 <= nums[i] <= 10`
+
+
+
+
+
+## Solution
+
+1. 这道题含重复数字的序列
+2. 46的基础上我们要记得先对**nums进行排序**
+3. 对比 nums[i] 和num[i-1]， 相同就跳过， 注意处理0的情况
+
+```python
+class Solution:
+    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+        result = list()
+        path = list()
+        record_lst = list()
+        def backTracking(nums, visited_lst):
+            if (len(path) == len(nums)):
+                result.append(path[:])
+                return
+
+            for i in range(len(nums)):
+                if not visited_lst[i]:
+                    if i > 0 and nums[i] == nums[i-1] and not visited_lst[i-1]:			# 注意这行
+                        continue
+                    visited_lst[i] = True
+                    path.append(nums[i])
+                    record_lst.append(path[:])
+                    backTracking(nums, visited_lst)
+                    visited_lst[i] = False
+                    path.pop()
+        visited_lst = [False] * len(nums)
+        backTracking(sorted(nums), visited_lst)				# 注意先排序
+        return result	
+        
+```
+
